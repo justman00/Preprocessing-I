@@ -1,1 +1,362 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  max-width: 800px;
+  margin: 0 auto;
+}
+header {
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+header .full-name {
+  font-size: 3rem;
+  font-family: "Rakkas", cursive;
+  letter-spacing: 1.2;
+}
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+header nav {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row;
+  font-size: 2rem;
+  padding-right: 2%;
+}
+@media (max-width: 500px) {
+  header nav {
+    padding-top: 5%;
+    width: 100%;
+    padding-left: 2%;
+  }
+}
+header nav a {
+  text-decoration: none;
+  color: #4e342e;
+}
+section .first-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row;
+  margin-top: 8%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid #4e342e;
+}
+@media (max-width: 500px) {
+  section .first-part {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  section .first-part .img-me {
+    margin-bottom: 10%;
+  }
+}
+section .first-part .img-me img {
+  margin-right: 5%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 6px 52px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 6px 52px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 52px 0px rgba(0, 0, 0, 0.75);
+}
+section .first-part .description {
+  width: 62%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Helvetica", sans-serif;
+}
+section .first-part .description h2 {
+  font-size: 3rem;
+  margin-bottom: 5%;
+}
+section .first-part .description p {
+  font-size: 1.8rem;
+  line-height: 140%;
+  margin-bottom: 2%;
+}
+section .more-about {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: row;
+  background-color: #efebe9;
+  margin-top: 5%;
+  border-radius: 10px;
+}
+@media (max-width: 500px) {
+  section .more-about {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+section .more-about h3 {
+  font-size: 3rem;
+  margin-bottom: 10%;
+  text-decoration: underline;
+}
+section .more-about #special-margin {
+  margin-bottom: 5%;
+}
+@media (max-width: 500px) {
+  section .more-about ul {
+    list-style: disc;
+  }
+}
+section .more-about ul li {
+  font-size: 2rem;
+  line-height: 160%;
+}
+section .more-about ul li i {
+  font-size: 2.8rem;
+}
+section .more-about .hobbies,
+section .more-about .experiences,
+section .more-about .skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 500px) {
+  section .more-about .hobbies,
+  section .more-about .experiences,
+  section .more-about .skills {
+    margin-bottom: 10%;
+  }
+}
+section .more-about .skills ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+section .more-about .hobbies {
+  margin-top: 2%;
+}
+section .sunset-img {
+  width: 100%;
+  padding-top: 5%;
+  margin-top: 5%;
+  border-top: 1px solid #4e342e;
+  padding-bottom: 5%;
+  border-bottom: 1px solid #4e342e;
+}
+section .sunset-img img {
+  max-width: 100%;
+  height: 50%;
+}
+section .last-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 5%;
+}
+section .last-part .contact {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 20%;
+}
+section .last-part .contact h3 {
+  margin: 0 auto 10%;
+  font-size: 2.6rem;
+  color: #4e342e;
+  text-decoration: underline;
+  font-family: "Helvetica", sans-serif;
+}
+section .last-part .contact ul {
+  width: 100%;
+  font-size: 2rem;
+  line-height: 160%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section .last-part .contact ul i {
+  font-size: 2.8rem;
+}
+section .last-part .contact ul li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10%;
+}
+section .last-part .contact ul li i {
+  font-size: 3rem;
+  color: #ad1457;
+}
+section .last-part .contact #effect p {
+  display: none;
+}
+section .last-part .contact #effect:hover i {
+  display: none;
+}
+section .last-part .contact #effect:hover p {
+  display: block;
+  font-size: 2rem;
+}
