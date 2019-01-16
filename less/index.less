@@ -147,7 +147,7 @@ html {
   font-size: 62.5%;
 }
 
-body {
+.container {
   max-width: 800px;
   margin: 0 auto;
 }
@@ -156,7 +156,7 @@ body {
 @important-font: "Rakkas", cursive;
 @description-font: "Helvetica", sans-serif;
 @brownish: #4e342e;
-@sunset-color: #ad1457;
+@sunset-color: #4e342e;
 
 // mixins
 .flex-it (@just: flex-start, @align: stretch, @direction: row) {
@@ -283,7 +283,7 @@ section {
     }
 
     .hobbies,
-    .experiences,
+    .languages,
     .skills {
       .flex-it(center, center, column);
 
@@ -296,8 +296,15 @@ section {
       .flex-it(flex-start, center, column);
     }
 
-    .hobbies {
-      margin-top: 2%;
+    .languages {
+      width: 30%;
+    }
+
+    .languages .hover-span {
+      display: none;
+    }
+    .languages li:hover span {
+      display: inline-block;
     }
   }
 }
@@ -313,6 +320,69 @@ section {
     img {
       max-width: 100%;
       height: 50%;
+    }
+  }
+}
+
+section {
+  .work-experience {
+    .flex-it(space-about, baseline);
+    width: 100%;
+    margin-top: 3%;
+    padding-bottom: 3%;
+    border-bottom: 1px solid @brownish;
+    @media (max-width: 500px) {
+      .flex-it(center, center, column);
+    }
+
+    .card {
+      width: 30%;
+      .flex-it(center, center, column);
+
+      @media (max-width: 500px) {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      h2 {
+        font-size: 2.4rem;
+        margin-bottom: 5%;
+      }
+      p {
+        line-height: 1.25;
+        font-size: 1.8rem;
+        margin-bottom: 5%;
+        text-align: center;
+      }
+      img {
+        width: 80%;
+        border-radius: 10px;
+      }
+    }
+
+    .card-1 {
+      margin-right: 5%;
+    }
+
+    .card-3 {
+      margin-left: 5%;
+    }
+
+    @media (max-width: 500px) {
+      .card-1 {
+        margin: 5% auto;
+        padding-bottom: 5%;
+        border-bottom: 1px solid @brownish;
+      }
+      .card-2 {
+        margin: 5% auto;
+        padding-bottom: 5%;
+        border-bottom: 1px solid @brownish;
+      }
+
+      .card-3 {
+        margin: 5% auto;
+      }
     }
   }
 }
